@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+    <body>
+    <input type="text" id = "checkAmount" placeholder = "Check Amount">
+    <input type="text" id = "tipPercentage" placeholder = "Tip Percentage" >
+    <div id="calculatedTip"></div>
+    <button id = "calculate">Calculate</button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+        $("#calculate").on("click", function() {
+            var tip = $("#checkAmount").val() * $("#tipPercentage").val();
+            console.log(tip);
+            $("#calculatedTip").html("Tip: $" + tip);
+        });
+      });
+    </script>
+    </body>
+</html>
